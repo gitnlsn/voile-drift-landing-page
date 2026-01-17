@@ -20,7 +20,7 @@ export function CTASection() {
               asChild
               className="gap-2 bg-white text-primary hover:bg-white/90"
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://play.google.com/store/apps/details?id=com.voiledrift.mobile" target="_blank" rel="noopener noreferrer">
                 <svg
                   className="h-5 w-5"
                   viewBox="0 0 24 24"
