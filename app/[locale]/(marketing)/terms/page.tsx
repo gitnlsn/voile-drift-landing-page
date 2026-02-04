@@ -1,5 +1,8 @@
+import { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/config";
+import { generatePageMetadata } from "@/lib/seo/metadata";
+import { BreadcrumbSchema } from "@/components/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -9,22 +12,32 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.terms" });
-  return {
+  return generatePageMetadata({
     title: t("title"),
     description: t("description"),
-  };
+    locale,
+    path: "/terms",
+  });
 }
 
 export default async function TermsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "terms" });
+  const metaT = await getTranslations({ locale, namespace: "metadata.terms" });
+
+  const breadcrumbItems = [
+    { name: locale === "pt" ? "Início" : "Home", path: "" },
+    { name: metaT("title") },
+  ];
 
   return (
-    <div className="py-16 md:py-24 bg-background">
+    <>
+      <BreadcrumbSchema locale={locale} items={breadcrumbItems} />
+      <div className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold tracking-tight text-foreground mb-8">
@@ -177,6 +190,7 @@ export default async function TermsPage({ params }: Props) {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

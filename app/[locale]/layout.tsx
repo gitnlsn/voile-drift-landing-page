@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
+import { siteConfig } from "@/lib/seo/config";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -17,23 +18,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Voile Drift - Capture Life's Moments, Get Intelligent Insights",
     template: "%s | Voile Drift",
   },
-  description:
-    "Voile Drift helps you capture life events in Google Calendar and provides intelligent insights powered by Gemini AI.",
-  keywords: [
-    "calendar",
-    "events",
-    "AI",
-    "Gemini",
-    "Google Calendar",
-    "life tracking",
-    "insights",
-  ],
-  authors: [{ name: "Nelson Kenzo Tamashiro" }],
-  creator: "Nelson Kenzo Tamashiro",
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.author }],
+  creator: siteConfig.author,
+  publisher: siteConfig.name,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -43,6 +42,22 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png" }],
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 };
 
 export function generateStaticParams() {

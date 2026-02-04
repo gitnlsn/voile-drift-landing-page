@@ -1,5 +1,8 @@
+import { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/config";
+import { generatePageMetadata } from "@/lib/seo/metadata";
+import { BreadcrumbSchema } from "@/components/seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,19 +22,27 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.about" });
-  return {
+  return generatePageMetadata({
     title: t("title"),
     description: t("description"),
-  };
+    locale,
+    path: "/about",
+  });
 }
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
+  const navT = await getTranslations({ locale, namespace: "navigation" });
+
+  const breadcrumbItems = [
+    { name: navT("home"), path: "" },
+    { name: navT("about") },
+  ];
 
   const values = [
     {
@@ -68,6 +79,7 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <div className="flex flex-col">
+      <BreadcrumbSchema locale={locale} items={breadcrumbItems} />
       {/* Hero Section */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-indigo-light/50 to-background">
         <div className="container mx-auto px-4 md:px-6">

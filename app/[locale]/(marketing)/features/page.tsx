@@ -1,5 +1,8 @@
+import { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/config";
+import { generatePageMetadata } from "@/lib/seo/metadata";
+import { BreadcrumbSchema, MobileAppSchema } from "@/components/seo";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 import { Calendar, Sparkles, Clock, LogIn, LucideIcon } from "lucide-react";
@@ -18,13 +21,15 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.features" });
-  return {
+  return generatePageMetadata({
     title: t("title"),
     description: t("description"),
-  };
+    locale,
+    path: "/features",
+  });
 }
 
 interface Feature {
@@ -70,6 +75,7 @@ export default async function FeaturesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "featuresPage" });
+  const navT = await getTranslations({ locale, namespace: "navigation" });
 
   const features = featureConfigs.map((config) => ({
     icon: config.icon,
@@ -79,8 +85,15 @@ export default async function FeaturesPage({ params }: Props) {
     screenshot: config.screenshot,
   }));
 
+  const breadcrumbItems = [
+    { name: navT("home"), path: "" },
+    { name: navT("features") },
+  ];
+
   return (
     <div className="flex flex-col">
+      <BreadcrumbSchema locale={locale} items={breadcrumbItems} />
+      <MobileAppSchema />
       {/* Hero Section */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-indigo-light/50 to-background">
         <div className="container mx-auto px-4 md:px-6">
