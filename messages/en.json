@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Voile Drift - Capture Life's Moments, Get Intelligent Insights",
+      "description": "Voile Drift helps you capture life events in Google Calendar and provides intelligent insights powered by Gemini AI."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn about Voile Drift - the mobile app that helps you capture life events and gain AI-powered insights."
+    },
+    "features": {
+      "title": "Features",
+      "description": "Explore Voile Drift's powerful features - Google Calendar sync, Gemini AI insights, and simple time tracking."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with the Voile Drift team. We'd love to hear your questions, feedback, or suggestions."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Privacy Policy for Voile Drift mobile application."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "Terms of Service for Voile Drift mobile application."
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact",
+    "getTheApp": "Get the App"
+  },
+  "footer": {
+    "tagline": "Capture your life events and get intelligent insights powered by Gemini AI.",
+    "product": "Product",
+    "legal": "Legal",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© {year} Voile Drift. All rights reserved.",
+    "developedBy": "Developed by Nelson Kenzo Tamashiro"
+  },
+  "hero": {
+    "badge": "Powered by Gemini AI",
+    "title": "Capture Life's Moments, Get",
+    "titleHighlight": "Intelligent Insights",
+    "description": "Voile Drift seamlessly stores your events in Google Calendar and uses Gemini AI to help you understand patterns in your life.",
+    "googlePlay": "Get it on Google Play",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Everything You Need",
+    "description": "Voile Drift combines powerful features with simplicity to help you track and understand your life better.",
+    "googleCalendarSync": {
+      "title": "Google Calendar Sync",
+      "description": "Seamlessly sync your events with Google Calendar. Access your schedule anywhere, anytime."
+    },
+    "richDescriptions": {
+      "title": "Rich Descriptions",
+      "description": "Capture detailed event information with rich text descriptions to remember every moment."
+    },
+    "geminiAiInsights": {
+      "title": "Gemini AI Insights",
+      "description": "Get intelligent analysis of your activities and patterns with the power of Gemini AI."
+    },
+    "simpleInterface": {
+      "title": "Simple Interface",
+      "description": "Clean, intuitive design that makes logging events effortless and enjoyable."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Getting started with Voile Drift is simple. Three easy steps to a more organized life.",
+    "step1": {
+      "step": "01",
+      "title": "Log Your Events",
+      "description": "Quickly capture any life event with details, notes, and timestamps using our intuitive interface."
+    },
+    "step2": {
+      "step": "02",
+      "title": "Sync to Calendar",
+      "description": "Your events are automatically saved to Google Calendar, keeping everything organized in one place."
+    },
+    "step3": {
+      "step": "03",
+      "title": "Get AI Insights",
+      "description": "Gemini AI analyzes your patterns and provides personalized insights about your activities."
+    }
+  },
+  "cta": {
+    "title": "Start Tracking Your Life Today",
+    "description": "Gain valuable insights into your daily life with Voile Drift. Available now on Android.",
+    "downloadAndroid": "Download for Android",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "heroTitle": "About Voile Drift",
+    "heroDescription": "Voile Drift was created with a simple mission: to help you understand your life better through intelligent event tracking and AI-powered insights.",
+    "missionBadge": "Our Mission",
+    "missionTitle": "Making Life Tracking Simple and Meaningful",
+    "missionDescription1": "We believe that understanding your daily activities and patterns is the first step to living a more intentional life. Voile Drift bridges the gap between simple event logging and meaningful insights.",
+    "missionDescription2": "By combining the reliability of Google Calendar with the intelligence of Gemini AI, we've created a tool that not only stores your events but helps you understand them.",
+    "calendarPlusAi": "Calendar + AI = Insights",
+    "calendarPlusAiDescription": "The perfect combination for understanding your life patterns.",
+    "valuesTitle": "Our Values",
+    "valuesDescription": "The principles that guide everything we build.",
+    "values": {
+      "userCentric": {
+        "title": "User-Centric Design",
+        "description": "Every feature is designed with you in mind, making life tracking effortless and enjoyable."
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "Your data belongs to you. We prioritize your privacy and security in everything we do."
+      },
+      "intelligent": {
+        "title": "Intelligent Insights",
+        "description": "Leveraging the power of Gemini AI to provide meaningful patterns and insights."
+      }
+    },
+    "technologyTitle": "Built with Modern Technology",
+    "technologyDescription": "We use industry-leading technologies to deliver the best experience.",
+    "technologies": {
+      "googleCalendar": {
+        "name": "Google Calendar",
+        "description": "Seamless integration for reliable event storage"
+      },
+      "geminiAi": {
+        "name": "Gemini AI",
+        "description": "Advanced AI for intelligent pattern recognition"
+      },
+      "materialDesign": {
+        "name": "Material Design",
+        "description": "Beautiful, intuitive interface following modern design principles"
+      }
+    },
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDescription": "Download Voile Drift today and start understanding your life better.",
+    "ctaButton": "Get the App"
+  },
+  "featuresPage": {
+    "heroTitle": "Powerful Features, Simple Experience",
+    "heroDescription": "Voile Drift combines intelligent AI insights with seamless calendar integration to help you understand and improve your daily life.",
+    "dashboardBadge": "AI-Powered Dashboard",
+    "dashboardTitle": "Your Life at a Glance",
+    "dashboardDescription1": "The Voile Drift dashboard gives you a comprehensive overview of your tracked events and AI-generated insights. See patterns emerge as you log more activities.",
+    "dashboardDescription2": "Weekly summaries, trend analysis, and personalized suggestions help you make the most of your time.",
+    "featureBadge": "Feature",
+    "features": {
+      "googleCalendarSync": {
+        "title": "Google Calendar Sync",
+        "description": "Seamlessly sync your events with Google Calendar. Your data is always backed up and accessible across all your devices. Never lose track of important moments.",
+        "alt": "Google Calendar sync feature"
+      },
+      "geminiAiInsights": {
+        "title": "Gemini AI Insights",
+        "description": "Powered by Google's Gemini AI, get intelligent insights about your habits and patterns. Discover trends you never knew existed and make data-driven decisions about your life.",
+        "alt": "Gemini AI insights feature"
+      },
+      "simpleTimeTracking": {
+        "title": "Simple Time Tracking",
+        "description": "A clean, intuitive interface makes logging events effortless. Track your activities with just a few taps - no complicated setup or learning curve required.",
+        "alt": "Simple time tracking interface"
+      },
+      "easyGettingStarted": {
+        "title": "Easy Getting Started",
+        "description": "Get up and running in seconds. Sign in with your Google account and start tracking immediately. Your calendar is automatically connected - no manual configuration needed.",
+        "alt": "Login and getting started screen"
+      }
+    },
+    "ctaTitle": "Ready to Try These Features?",
+    "ctaDescription": "Download Voile Drift today and start tracking your life with powerful AI insights.",
+    "ctaButton": "Get the App"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Contact Us",
+    "description": "Have questions, feedback, or suggestions? We'd love to hear from you. Click the button below to send us a message.",
+    "sendMessage": "Send us a message",
+    "dialogTitle": "Contact Us",
+    "formLoading": "Loading...",
+    "preferEmail": "Prefer email? Reach out directly:"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: February 2025",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content1": "Nelson Kenzo Tamashiro (\"we,\" \"our,\" or \"us\") operates the Voile Drift mobile application (\"the App\"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App.",
+        "content2": "Please read this Privacy Policy carefully. By using the App, you consent to the practices described in this policy."
+      },
+      "informationCollected": {
+        "title": "2. Information We Collect",
+        "providedTitle": "2.1 Information You Provide",
+        "providedItems": {
+          "account": "Account Information: When you sign in with Google, we receive your name, email address, and profile picture.",
+          "events": "Event Data: Events you create, including titles, descriptions, dates, times, and any notes you add."
+        },
+        "automaticTitle": "2.2 Information Collected Automatically",
+        "automaticItems": {
+          "usage": "Usage Data: How you interact with the App, including features used and time spent.",
+          "device": "Device Information: Device type, operating system version, and unique device identifiers."
+        }
+      },
+      "howWeUse": {
+        "title": "3. How We Use Your Information",
+        "intro": "We use the information we collect to:",
+        "items": {
+          "maintain": "Provide and maintain the App's functionality",
+          "sync": "Sync your events with Google Calendar",
+          "insights": "Generate AI-powered insights using Gemini AI based on your event data",
+          "improve": "Improve and optimize the App",
+          "support": "Respond to your inquiries and provide customer support",
+          "updates": "Send you updates and notifications related to the App"
+        }
+      },
+      "thirdParty": {
+        "title": "4. Third-Party Services",
+        "intro": "The App integrates with the following third-party services:",
+        "googleTitle": "4.1 Google Services",
+        "googleItems": {
+          "signIn": "Google Sign-In: For authentication purposes",
+          "calendar": "Google Calendar API: To store and retrieve your events"
+        },
+        "googlePolicy": "Your use of Google services is governed by",
+        "googlePolicyLink": "Google's Privacy Policy",
+        "geminiTitle": "4.2 Google Gemini AI",
+        "geminiContent": "We use Google's Gemini AI to analyze your event data and generate insights. Your event descriptions and patterns may be processed by Gemini AI to provide personalized insights. This processing is subject to Google's AI terms and privacy policies."
+      },
+      "dataSecurity": {
+        "title": "5. Data Storage and Security",
+        "intro": "Your event data is primarily stored in your Google Calendar account. We implement appropriate technical and organizational measures to protect your information, including:",
+        "items": {
+          "encryption": "Encryption of data in transit using HTTPS",
+          "auth": "Secure authentication through Google Sign-In",
+          "access": "Limited access to personal data"
+        },
+        "disclaimer": "However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security of your data."
+      },
+      "dataSharing": {
+        "title": "6. Data Sharing",
+        "intro": "We do not sell your personal information. We may share your information in the following circumstances:",
+        "items": {
+          "providers": "With Service Providers: Third-party services that help us operate the App (Google Calendar, Gemini AI)",
+          "legal": "Legal Requirements: When required by law or to protect our rights",
+          "business": "Business Transfers: In connection with a merger, acquisition, or sale of assets"
+        }
+      },
+      "yourRights": {
+        "title": "7. Your Rights",
+        "intro": "Depending on your location, you may have the following rights:",
+        "items": {
+          "access": "Access: Request access to your personal data",
+          "correction": "Correction: Request correction of inaccurate data",
+          "deletion": "Deletion: Request deletion of your data",
+          "portability": "Portability: Request a copy of your data in a portable format",
+          "withdraw": "Withdraw Consent: Withdraw consent for data processing"
+        },
+        "exercise": "To exercise these rights, please contact us using the information below."
+      },
+      "dataRetention": {
+        "title": "8. Data Retention",
+        "content": "We retain your information for as long as your account is active or as needed to provide you services. Your event data is stored in your Google Calendar account and is subject to Google's retention policies. You can delete your data at any time through the App or your Google Calendar."
+      },
+      "children": {
+        "title": "9. Children's Privacy",
+        "content": "The App is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take steps to delete that information."
+      },
+      "changes": {
+        "title": "10. Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date. You are advised to review this Privacy Policy periodically for any changes."
+      },
+      "contactUs": {
+        "title": "11. Contact Us",
+        "intro": "If you have any questions about this Privacy Policy, please contact us:",
+        "developer": "Developer:",
+        "developerName": "Nelson Kenzo Tamashiro",
+        "email": "Email:"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: February 2025",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By downloading, installing, or using Voile Drift (\"the App\"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App."
+      },
+      "description": {
+        "title": "2. Description of Service",
+        "intro": "Voile Drift is a mobile application that allows users to:",
+        "items": {
+          "create": "Create and manage events",
+          "sync": "Sync events with Google Calendar",
+          "insights": "Receive AI-powered insights through Gemini AI integration"
+        }
+      },
+      "userAccounts": {
+        "title": "3. User Accounts",
+        "content": "To use certain features of the App, you may need to sign in with your Google account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+      },
+      "userContent": {
+        "title": "4. User Content",
+        "content": "You retain ownership of any content you create using the App, including event descriptions and notes. By using the App, you grant us a limited license to process your content solely for the purpose of providing the service."
+      },
+      "thirdParty": {
+        "title": "5. Third-Party Services",
+        "intro": "The App integrates with third-party services including:",
+        "items": {
+          "calendar": "Google Calendar: For event storage and synchronization",
+          "gemini": "Google Gemini AI: For generating insights about your events"
+        },
+        "note": "Your use of these services is also subject to their respective terms of service and privacy policies."
+      },
+      "acceptableUse": {
+        "title": "6. Acceptable Use",
+        "intro": "You agree not to:",
+        "items": {
+          "unlawful": "Use the App for any unlawful purpose",
+          "unauthorized": "Attempt to gain unauthorized access to the App or its systems",
+          "interfere": "Interfere with or disrupt the App's functionality",
+          "reverse": "Reverse engineer or attempt to extract the source code",
+          "harass": "Use the App to harass, abuse, or harm others"
+        }
+      },
+      "intellectualProperty": {
+        "title": "7. Intellectual Property",
+        "content": "The App, including its design, features, and content (excluding user content), is owned by Nelson Kenzo Tamashiro and is protected by intellectual property laws. You may not copy, modify, distribute, or create derivative works without prior written consent."
+      },
+      "disclaimer": {
+        "title": "8. Disclaimer of Warranties",
+        "content": "The App is provided \"as is\" and \"as available\" without warranties of any kind, either express or implied. We do not guarantee that the App will be uninterrupted, secure, or error-free."
+      },
+      "limitation": {
+        "title": "9. Limitation of Liability",
+        "content": "To the maximum extent permitted by law, Nelson Kenzo Tamashiro shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App."
+      },
+      "changes": {
+        "title": "10. Changes to Terms",
+        "content": "We reserve the right to modify these terms at any time. Continued use of the App after changes constitutes acceptance of the modified terms. We will notify users of significant changes through the App or via email."
+      },
+      "termination": {
+        "title": "11. Termination",
+        "content": "We may terminate or suspend your access to the App at any time, without prior notice, for conduct that we believe violates these terms or is harmful to other users or us."
+      },
+      "contactInfo": {
+        "title": "12. Contact Information",
+        "intro": "If you have any questions about these Terms of Service, please contact us:",
+        "developer": "Developer:",
+        "developerName": "Nelson Kenzo Tamashiro",
+        "email": "Email:"
+      }
+    }
+  },
+  "languageSwitcher": {
+    "switchTo": "Switch to {language}",
+    "english": "English",
+    "portuguese": "Portuguese"
+  }
+}

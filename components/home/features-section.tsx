@@ -1,44 +1,44 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, FileText, Sparkles, Smartphone } from "lucide-react";
 
-const features = [
-  {
-    icon: Calendar,
-    title: "Google Calendar Sync",
-    description:
-      "Seamlessly sync your events with Google Calendar. Access your schedule anywhere, anytime.",
-  },
-  {
-    icon: FileText,
-    title: "Rich Descriptions",
-    description:
-      "Capture detailed event information with rich text descriptions to remember every moment.",
-  },
-  {
-    icon: Sparkles,
-    title: "Gemini AI Insights",
-    description:
-      "Get intelligent analysis of your activities and patterns with the power of Gemini AI.",
-  },
-  {
-    icon: Smartphone,
-    title: "Simple Interface",
-    description:
-      "Clean, intuitive design that makes logging events effortless and enjoyable.",
-  },
-];
-
 export function FeaturesSection() {
+  const t = useTranslations("features");
+
+  const features = [
+    {
+      icon: Calendar,
+      title: t("googleCalendarSync.title"),
+      description: t("googleCalendarSync.description"),
+    },
+    {
+      icon: FileText,
+      title: t("richDescriptions.title"),
+      description: t("richDescriptions.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("geminiAiInsights.title"),
+      description: t("geminiAiInsights.description"),
+    },
+    {
+      icon: Smartphone,
+      title: t("simpleInterface.title"),
+      description: t("simpleInterface.description"),
+    },
+  ];
+
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-4">
-            Everything You Need
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Voile Drift combines powerful features with simplicity to help you
-            track and understand your life better.
+            {t("description")}
           </p>
         </div>
 

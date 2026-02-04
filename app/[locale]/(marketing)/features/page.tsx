@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { locales } from "@/i18n/config";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 import { Calendar, Sparkles, Clock, LogIn, LucideIcon } from "lucide-react";
@@ -9,56 +10,75 @@ import screenshot03 from "@/assets/screenshots/03.png";
 import screenshot04 from "@/assets/screenshots/04.png";
 import screenshot05 from "@/assets/screenshots/05.png";
 
-export const metadata: Metadata = {
-  title: "Features",
-  description:
-    "Explore Voile Drift's powerful features - Google Calendar sync, Gemini AI insights, and simple time tracking.",
+type Props = {
+  params: Promise<{ locale: string }>;
 };
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.features" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 interface Feature {
   icon: LucideIcon;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
+  altKey: string;
   screenshot: StaticImageData;
-  alt: string;
 }
 
-const features: Feature[] = [
+const featureConfigs: Feature[] = [
   {
     icon: Calendar,
-    title: "Google Calendar Sync",
-    description:
-      "Seamlessly sync your events with Google Calendar. Your data is always backed up and accessible across all your devices. Never lose track of important moments.",
+    titleKey: "features.googleCalendarSync.title",
+    descriptionKey: "features.googleCalendarSync.description",
+    altKey: "features.googleCalendarSync.alt",
     screenshot: screenshot03,
-    alt: "Google Calendar sync feature",
   },
   {
     icon: Sparkles,
-    title: "Gemini AI Insights",
-    description:
-      "Powered by Google's Gemini AI, get intelligent insights about your habits and patterns. Discover trends you never knew existed and make data-driven decisions about your life.",
+    titleKey: "features.geminiAiInsights.title",
+    descriptionKey: "features.geminiAiInsights.description",
+    altKey: "features.geminiAiInsights.alt",
     screenshot: screenshot04,
-    alt: "Gemini AI insights feature",
   },
   {
     icon: Clock,
-    title: "Simple Time Tracking",
-    description:
-      "A clean, intuitive interface makes logging events effortless. Track your activities with just a few taps - no complicated setup or learning curve required.",
+    titleKey: "features.simpleTimeTracking.title",
+    descriptionKey: "features.simpleTimeTracking.description",
+    altKey: "features.simpleTimeTracking.alt",
     screenshot: screenshot05,
-    alt: "Simple time tracking interface",
   },
   {
     icon: LogIn,
-    title: "Easy Getting Started",
-    description:
-      "Get up and running in seconds. Sign in with your Google account and start tracking immediately. Your calendar is automatically connected - no manual configuration needed.",
+    titleKey: "features.easyGettingStarted.title",
+    descriptionKey: "features.easyGettingStarted.description",
+    altKey: "features.easyGettingStarted.alt",
     screenshot: screenshot01,
-    alt: "Login and getting started screen",
   },
 ];
 
-export default function FeaturesPage() {
+export default async function FeaturesPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "featuresPage" });
+
+  const features = featureConfigs.map((config) => ({
+    icon: config.icon,
+    title: t(config.titleKey),
+    description: t(config.descriptionKey),
+    alt: t(config.altKey),
+    screenshot: config.screenshot,
+  }));
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -66,11 +86,10 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl mb-6">
-              Powerful Features, Simple Experience
+              {t("heroTitle")}
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl">
-              Voile Drift combines intelligent AI insights with seamless calendar
-              integration to help you understand and improve your daily life.
+              {t("heroDescription")}
             </p>
           </div>
         </div>
@@ -83,19 +102,16 @@ export default function FeaturesPage() {
             <div className="order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
                 <Sparkles className="h-4 w-4" />
-                AI-Powered Dashboard
+                {t("dashboardBadge")}
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-6">
-                Your Life at a Glance
+                {t("dashboardTitle")}
               </h2>
               <p className="text-muted-foreground mb-4">
-                The Voile Drift dashboard gives you a comprehensive overview of
-                your tracked events and AI-generated insights. See patterns
-                emerge as you log more activities.
+                {t("dashboardDescription1")}
               </p>
               <p className="text-muted-foreground">
-                Weekly summaries, trend analysis, and personalized suggestions
-                help you make the most of your time.
+                {t("dashboardDescription2")}
               </p>
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
@@ -134,7 +150,7 @@ export default function FeaturesPage() {
               >
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
                   <feature.icon className="h-4 w-4" />
-                  Feature
+                  {t("featureBadge")}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-6">
                   {feature.title}
@@ -170,11 +186,10 @@ export default function FeaturesPage() {
       <section className="py-16 md:py-24 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl mb-4">
-            Ready to Try These Features?
+            {t("ctaTitle")}
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            Download Voile Drift today and start tracking your life with
-            powerful AI insights.
+            {t("ctaDescription")}
           </p>
           <Button
             size="lg"
@@ -187,7 +202,7 @@ export default function FeaturesPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get the App
+              {t("ctaButton")}
             </a>
           </Button>
         </div>

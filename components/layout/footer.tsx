@@ -1,22 +1,27 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/lib/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Separator } from "@/components/ui/separator";
 
-const footerLinks = {
-  product: [
-    { href: "/", label: "Home" },
-    { href: "/features", label: "Features" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
-  legal: [
-    { href: "/terms", label: "Terms of Service" },
-    { href: "/privacy", label: "Privacy Policy" },
-  ],
-};
-
 export function Footer() {
+  const t = useTranslations("footer");
+  const navT = useTranslations("navigation");
   const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    product: [
+      { href: "/", label: navT("home") },
+      { href: "/features", label: navT("features") },
+      { href: "/about", label: navT("about") },
+      { href: "/contact", label: navT("contact") },
+    ],
+    legal: [
+      { href: "/terms", label: t("termsOfService") },
+      { href: "/privacy", label: t("privacyPolicy") },
+    ],
+  };
 
   return (
     <footer className="border-t bg-slate-50">
@@ -37,15 +42,14 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Capture your life events and get intelligent insights powered by
-              Gemini AI.
+              {t("tagline")}
             </p>
           </div>
 
           {/* Product Links */}
           <div>
             <h3 className="font-semibold text-sm text-foreground mb-3">
-              Product
+              {t("product")}
             </h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
@@ -64,7 +68,7 @@ export function Footer() {
           {/* Legal Links */}
           <div>
             <h3 className="font-semibold text-sm text-foreground mb-3">
-              Legal
+              {t("legal")}
             </h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
@@ -85,10 +89,10 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Voile Drift. All rights reserved.
+            {t("copyright", { year: currentYear })}
           </p>
           <p className="text-sm text-muted-foreground">
-            Developed by Nelson Kenzo Tamashiro
+            {t("developedBy")}
           </p>
         </div>
       </div>

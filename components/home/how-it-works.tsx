@@ -1,40 +1,41 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { PenLine, Cloud, Lightbulb } from "lucide-react";
 
-const steps = [
-  {
-    icon: PenLine,
-    step: "01",
-    title: "Log Your Events",
-    description:
-      "Quickly capture any life event with details, notes, and timestamps using our intuitive interface.",
-  },
-  {
-    icon: Cloud,
-    step: "02",
-    title: "Sync to Calendar",
-    description:
-      "Your events are automatically saved to Google Calendar, keeping everything organized in one place.",
-  },
-  {
-    icon: Lightbulb,
-    step: "03",
-    title: "Get AI Insights",
-    description:
-      "Gemini AI analyzes your patterns and provides personalized insights about your activities.",
-  },
-];
-
 export function HowItWorksSection() {
+  const t = useTranslations("howItWorks");
+
+  const steps = [
+    {
+      icon: PenLine,
+      step: t("step1.step"),
+      title: t("step1.title"),
+      description: t("step1.description"),
+    },
+    {
+      icon: Cloud,
+      step: t("step2.step"),
+      title: t("step2.title"),
+      description: t("step2.description"),
+    },
+    {
+      icon: Lightbulb,
+      step: t("step3.step"),
+      title: t("step3.title"),
+      description: t("step3.description"),
+    },
+  ];
+
   return (
     <section className="py-20 md:py-28 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-4">
-            How It Works
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Getting started with Voile Drift is simple. Three easy steps to a
-            more organized life.
+            {t("description")}
           </p>
         </div>
 

@@ -1,7 +1,13 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { Calendar, Sparkles } from "lucide-react";
 
 export function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-light/50 to-background py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
@@ -10,18 +16,17 @@ export function HeroSection() {
             <div className="flex items-center justify-center lg:justify-start gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
                 <Sparkles className="h-3.5 w-3.5" />
-                Powered by Gemini AI
+                {t("badge")}
               </span>
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Capture Life&apos;s Moments, Get{" "}
-              <span className="text-primary">Intelligent Insights</span>
+              {t("title")}{" "}
+              <span className="text-primary">{t("titleHighlight")}</span>
             </h1>
 
             <p className="text-lg text-muted-foreground md:text-xl max-w-xl mx-auto lg:mx-0">
-              Voile Drift seamlessly stores your events in Google Calendar and
-              uses Gemini AI to help you understand patterns in your life.
+              {t("description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -34,11 +39,11 @@ export function HeroSection() {
                   >
                     <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
                   </svg>
-                  Get it on Google Play
+                  {t("googlePlay")}
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/about">Learn More</a>
+                <Link href="/about">{t("learnMore")}</Link>
               </Button>
             </div>
           </div>
