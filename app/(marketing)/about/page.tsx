@@ -190,7 +190,7 @@ export default function AboutPage() {
             asChild
             className="bg-white text-primary hover:bg-white/90"
           >
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/details?id=com.voiledrift.mobile" target="_blank" rel="noopener noreferrer">
               Get the App
             </a>
           </Button>

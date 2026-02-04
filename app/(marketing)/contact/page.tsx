@@ -1,11 +1,14 @@
-import { Metadata } from "next";
-import { Mail, MessageSquare } from "lucide-react";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with the Voile Drift team. We'd love to hear your feedback and questions.",
-};
+import { Mail, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function ContactPage() {
   return (
@@ -21,34 +24,44 @@ export default function ContactPage() {
             <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl mb-6">
               Contact Us
             </h1>
-            <p className="text-lg text-muted-foreground md:text-xl">
+            <p className="text-lg text-muted-foreground md:text-xl mb-8">
               Have questions, feedback, or suggestions? We&apos;d love to hear
-              from you. Fill out the form below and we&apos;ll get back to you
-              as soon as possible.
+              from you. Click the button below to send us a message.
             </p>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="gap-2">
+                  <MessageSquare className="h-5 w-5" />
+                  Send us a message
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl max-h-[90vh] overflow-hidden">
+                <DialogHeader>
+                  <DialogTitle>Contact Us</DialogTitle>
+                </DialogHeader>
+                <div className="overflow-hidden rounded-md">
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfCQKofdJWp7LrJV1scUl3MCKUzeL4zYZBtilb6J9Uij810Eg/viewform?embedded=true"
+                    width="100%"
+                    height="600"
+                    className="border-0"
+                    style={{ height: "70vh", minHeight: "400px" }}
+                    title="Contact Form"
+                  >
+                    Loading...
+                  </iframe>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Alternative Contact */}
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfCQKofdJWp7LrJV1scUl3MCKUzeL4zYZBtilb6J9Uij810Eg/viewform?embedded=true"
-                width="100%"
-                height="1035"
-                className="border-0"
-                title="Contact Form"
-              >
-                Loading...
-              </iframe>
-            </div>
-          </div>
-
-          {/* Alternative Contact */}
-          <div className="max-w-2xl mx-auto mt-12 text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <p className="text-muted-foreground mb-4">
               Prefer email? Reach out directly:
             </p>

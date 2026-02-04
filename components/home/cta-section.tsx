@@ -10,8 +10,8 @@ export function CTASection() {
             Start Tracking Your Life Today
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mb-8">
-            Join thousands of users who are already gaining valuable insights
-            into their daily lives with Voile Drift.
+            Gain valuable insights into your daily life with Voile Drift.
+            Available now on Android.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
