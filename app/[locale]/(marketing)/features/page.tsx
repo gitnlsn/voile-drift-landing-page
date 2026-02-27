@@ -5,6 +5,7 @@ import { generatePageMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbSchema, MobileAppSchema } from "@/components/seo";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
+import { PlayStoreLink } from "@/components/shared/play-store-link";
 import { Calendar, Sparkles, Clock, LogIn, LucideIcon } from "lucide-react";
 
 import screenshot01 from "@/assets/screenshots/01.png";
@@ -210,13 +211,9 @@ export default async function FeaturesPage({ params }: Props) {
             asChild
             className="bg-white text-primary hover:bg-white/90"
           >
-            <a
-              href="https://play.google.com/store/apps/details?id=com.voiledrift.mobile"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <PlayStoreLink>
               {t("ctaButton")}
-            </a>
+            </PlayStoreLink>
           </Button>
         </div>
       </section>

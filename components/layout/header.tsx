@@ -13,6 +13,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { PlayStoreLink } from "@/components/shared/play-store-link";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +55,9 @@ export function Header() {
           ))}
           <LanguageSwitcher />
           <Button asChild>
-            <a href="https://play.google.com/store/apps/details?id=com.voiledrift.mobile" target="_blank" rel="noopener noreferrer">
+            <PlayStoreLink>
               {t("getTheApp")}
-            </a>
+            </PlayStoreLink>
           </Button>
         </nav>
 
@@ -84,9 +85,9 @@ export function Header() {
                   </Link>
                 ))}
                 <Button asChild className="mt-4">
-                  <a href="https://play.google.com/store/apps/details?id=com.voiledrift.mobile" target="_blank" rel="noopener noreferrer">
+                  <PlayStoreLink>
                     {t("getTheApp")}
-                  </a>
+                  </PlayStoreLink>
                 </Button>
               </nav>
             </SheetContent>
