@@ -6,6 +6,8 @@ import { BreadcrumbSchema } from "@/components/seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlayStoreLink } from "@/components/shared/play-store-link";
+import Image from "next/image";
+import nelsonPhoto from "@/assets/people/nelson.jpg";
 import {
   Calendar,
   Sparkles,
@@ -133,6 +135,37 @@ export default async function AboutPage({ params }: Props) {
                     {t("calendarPlusAiDescription")}
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Creator Section */}
+      <section className="py-16 md:py-24 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-8">
+              {t("creatorTitle")}
+            </h2>
+            <div className="flex flex-col items-center gap-6">
+              <Image
+                src={nelsonPhoto}
+                alt="Nelson Kenzo Tamashiro"
+                width={128}
+                height={128}
+                className="rounded-full object-cover w-32 h-32 border-4 border-white shadow-lg"
+              />
+              <div>
+                <h3 className="font-semibold text-xl mb-1">
+                  Nelson Kenzo Tamashiro
+                </h3>
+                <p className="text-sm text-primary font-medium mb-4">
+                  {t("creatorRole")}
+                </p>
+                <p className="text-muted-foreground max-w-lg mx-auto">
+                  {t("creatorBio")}
+                </p>
               </div>
             </div>
           </div>

@@ -145,6 +145,9 @@
         "description": "Beautiful, intuitive interface following modern design principles"
       }
     },
+    "creatorTitle": "Meet the Creator",
+    "creatorRole": "Creator & Developer",
+    "creatorBio": "Hi! I'm Nelson, the developer behind Voile Drift. I built this app to help people capture and understand their daily life patterns through the power of AI and Google Calendar.",
     "ctaTitle": "Ready to Get Started?",
     "ctaDescription": "Download Voile Drift today and start understanding your life better.",
     "ctaButton": "Get the App"
