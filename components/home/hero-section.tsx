@@ -1,10 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { PlayStoreLink } from "@/components/shared/play-store-link";
-import { Calendar, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import Image from "next/image";
+import screenshot02 from "@/assets/screenshots/02.png";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -44,39 +45,22 @@ export function HeroSection() {
                 </PlayStoreLink>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/about">{t("learnMore")}</Link>
+                <a href="#features">{t("learnMore")}</a>
               </Button>
             </div>
           </div>
 
-          {/* App Mockup Placeholder */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-amber/20 blur-3xl rounded-full" />
-              <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-200 p-4 w-[280px] md:w-[320px]">
-                <div className="bg-slate-100 rounded-2xl aspect-[9/16] flex flex-col items-center justify-center gap-4 p-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-                    <Calendar className="h-8 w-8 text-primary" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="font-semibold text-foreground">
-                      Voile Drift
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Your intelligent calendar companion
-                    </p>
-                  </div>
-                  <div className="w-full space-y-2 mt-4">
-                    {[1, 2, 3].map((i) => (
-                      <div
-                        key={i}
-                        className="bg-white rounded-lg p-3 shadow-sm border"
-                      >
-                        <div className="h-2 bg-slate-200 rounded w-3/4 mb-2" />
-                        <div className="h-2 bg-slate-100 rounded w-1/2" />
-                      </div>
-                    ))}
-                  </div>
+              <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl">
+                <div className="bg-slate-900 rounded-[2.5rem] overflow-hidden">
+                  <Image
+                    src={screenshot02}
+                    alt="Voile Drift app dashboard with AI insights"
+                    className="w-[280px] md:w-[320px] h-auto"
+                    priority
+                  />
                 </div>
               </div>
             </div>

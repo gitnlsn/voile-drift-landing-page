@@ -31,7 +31,7 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="features" className="py-20 md:py-28 bg-background scroll-mt-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl mb-4">

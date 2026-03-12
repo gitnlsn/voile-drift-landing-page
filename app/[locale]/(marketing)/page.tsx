@@ -8,6 +8,7 @@ import {
   MobileAppSchema,
 } from "@/components/seo";
 import { HeroSection } from "@/components/home/hero-section";
+import { TrustStrip } from "@/components/home/trust-strip";
 import { FeaturesSection } from "@/components/home/features-section";
 import { HowItWorksSection } from "@/components/home/how-it-works";
 import { CTASection } from "@/components/home/cta-section";
@@ -42,6 +43,7 @@ export default async function HomePage({ params }: Props) {
       <WebsiteSchema locale={locale} />
       <MobileAppSchema />
       <HeroSection />
+      <TrustStrip />
       <FeaturesSection />
       <HowItWorksSection />
       <CTASection />

@@ -14,6 +14,7 @@ export function Footer() {
     product: [
       { href: "/", label: navT("home") },
       { href: "/features", label: navT("features") },
+      { href: "/pricing", label: navT("pricing") },
       { href: "/about", label: navT("about") },
       { href: "/contact", label: navT("contact") },
     ],

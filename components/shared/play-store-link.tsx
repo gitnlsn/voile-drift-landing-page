@@ -14,17 +14,20 @@ const PLAY_STORE_URL =
 function handlePlayStoreClick(e: React.MouseEvent<HTMLAnchorElement>) {
   if (typeof window.gtag !== "undefined") {
     e.preventDefault();
+    let navigated = false;
+    const navigate = () => {
+      if (!navigated) {
+        navigated = true;
+        window.open(PLAY_STORE_URL, "_blank", "noopener,noreferrer");
+      }
+    };
     window.gtag("event", "conversion", {
       send_to: "AW-11267156254/x_qCCJ_UzvgbEJ7SzPwp",
       transaction_id: "",
-      event_callback: () => {
-        window.open(PLAY_STORE_URL, "_blank", "noopener,noreferrer");
-      },
+      event_callback: navigate,
     });
     // Fallback in case callback doesn't fire
-    setTimeout(() => {
-      window.open(PLAY_STORE_URL, "_blank", "noopener,noreferrer");
-    }, 1000);
+    setTimeout(navigate, 1000);
   }
 }
 

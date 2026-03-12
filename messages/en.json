@@ -23,11 +23,16 @@
     "terms": {
       "title": "Terms of Service",
       "description": "Terms of Service for Voile Drift mobile application."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Choose the right Voile Drift plan for you. Free and Premium plans available."
     }
   },
   "navigation": {
     "home": "Home",
     "features": "Features",
+    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
     "getTheApp": "Get the App"
@@ -42,12 +47,18 @@
     "developedBy": "Developed by Nelson Kenzo Tamashiro"
   },
   "hero": {
-    "badge": "Powered by Gemini AI",
+    "badge": "AI-Powered Life Insights",
     "title": "Capture Life's Moments, Get",
     "titleHighlight": "Intelligent Insights",
     "description": "Voile Drift seamlessly stores your events in Google Calendar and uses Gemini AI to help you understand patterns in your life.",
-    "googlePlay": "Get it on Google Play",
+    "googlePlay": "Start Tracking for Free",
     "learnMore": "Learn More"
+  },
+  "trustStrip": {
+    "googleCalendar": "Google Calendar Sync",
+    "geminiAi": "Gemini AI Insights",
+    "privacyFirst": "Privacy First",
+    "free": "Free Plan Available"
   },
   "features": {
     "title": "Everything You Need",
@@ -89,10 +100,9 @@
     }
   },
   "cta": {
-    "title": "Start Tracking Your Life Today",
+    "title": "Ready to Understand Your Life Better?",
     "description": "Gain valuable insights into your daily life with Voile Drift. Available now on Android.",
-    "downloadAndroid": "Download for Android",
-    "learnMore": "Learn More"
+    "downloadAndroid": "Download on Android"
   },
   "about": {
     "heroTitle": "About Voile Drift",
@@ -354,6 +364,44 @@
         "email": "Email:"
       }
     }
+  },
+  "pricingPage": {
+    "heroTitle": "Simple, Transparent Pricing",
+    "heroDescription": "Choose the plan that fits your lifestyle. Start free and upgrade when you're ready.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save ~44%",
+    "freePlan": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Everything you need to start tracking your life.",
+      "cta": "Get Started Free"
+    },
+    "premiumPlan": {
+      "name": "Premium",
+      "monthlyPrice": "$5.99",
+      "annualPrice": "$39.99",
+      "monthlyPeriod": "/month",
+      "annualPeriod": "/year",
+      "badge": "Most Popular",
+      "description": "Unlock the full power of AI-driven insights.",
+      "cta": "Get Premium"
+    },
+    "features": {
+      "title": "Compare Plans",
+      "description": "See what's included in each plan.",
+      "eventLogging": "Event logging",
+      "googleCalendarSync": "Google Calendar sync",
+      "simpleInterface": "Simple interface",
+      "dailyAiInsights": "Daily AI insights",
+      "aiAssistant": "AI assistant messages",
+      "fivePerDay": "5 / day",
+      "unlimited": "Unlimited"
+    },
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDescription": "Download Voile Drift and start tracking your life today.",
+    "ctaButton": "Download on Android"
   },
   "languageSwitcher": {
     "switchTo": "Switch to {language}",

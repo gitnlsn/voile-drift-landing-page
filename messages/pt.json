@@ -23,11 +23,16 @@
     "terms": {
       "title": "Termos de Serviço",
       "description": "Termos de Serviço do aplicativo móvel Voile Drift."
+    },
+    "pricing": {
+      "title": "Preços",
+      "description": "Escolha o plano ideal do Voile Drift para você. Planos Gratuito e Premium disponíveis."
     }
   },
   "navigation": {
     "home": "Início",
     "features": "Funcionalidades",
+    "pricing": "Preços",
     "about": "Sobre",
     "contact": "Contato",
     "getTheApp": "Baixar App"
@@ -42,12 +47,18 @@
     "developedBy": "Desenvolvido por Nelson Kenzo Tamashiro"
   },
   "hero": {
-    "badge": "Desenvolvido com Gemini AI",
+    "badge": "Insights de Vida com IA",
     "title": "Capture os Momentos da Vida, Obtenha",
     "titleHighlight": "Insights Inteligentes",
     "description": "Voile Drift armazena seus eventos no Google Calendar e usa Gemini AI para ajudá-lo a entender padrões em sua vida.",
-    "googlePlay": "Baixar no Google Play",
+    "googlePlay": "Comece a Rastrear Grátis",
     "learnMore": "Saiba Mais"
+  },
+  "trustStrip": {
+    "googleCalendar": "Sincronização com Google Calendar",
+    "geminiAi": "Insights com Gemini AI",
+    "privacyFirst": "Privacidade em Primeiro Lugar",
+    "free": "Plano Gratuito Disponível"
   },
   "features": {
     "title": "Tudo o que Você Precisa",
@@ -89,10 +100,9 @@
     }
   },
   "cta": {
-    "title": "Comece a Rastrear Sua Vida Hoje",
+    "title": "Pronto para Entender Melhor Sua Vida?",
     "description": "Obtenha insights valiosos sobre sua vida diária com o Voile Drift. Disponível agora para Android.",
-    "downloadAndroid": "Baixar para Android",
-    "learnMore": "Saiba Mais"
+    "downloadAndroid": "Baixar para Android"
   },
   "about": {
     "heroTitle": "Sobre o Voile Drift",
@@ -354,6 +364,44 @@
         "email": "Email:"
       }
     }
+  },
+  "pricingPage": {
+    "heroTitle": "Preços Simples e Transparentes",
+    "heroDescription": "Escolha o plano que combina com seu estilo de vida. Comece grátis e faça upgrade quando quiser.",
+    "monthly": "Mensal",
+    "annual": "Anual",
+    "save": "Economize ~44%",
+    "freePlan": {
+      "name": "Gratuito",
+      "price": "$0",
+      "period": "para sempre",
+      "description": "Tudo que você precisa para começar a rastrear sua vida.",
+      "cta": "Começar Grátis"
+    },
+    "premiumPlan": {
+      "name": "Premium",
+      "monthlyPrice": "$5.99",
+      "annualPrice": "$39.99",
+      "monthlyPeriod": "/mês",
+      "annualPeriod": "/ano",
+      "badge": "Mais Popular",
+      "description": "Desbloqueie todo o poder dos insights com IA.",
+      "cta": "Assinar Premium"
+    },
+    "features": {
+      "title": "Compare os Planos",
+      "description": "Veja o que está incluído em cada plano.",
+      "eventLogging": "Registro de eventos",
+      "googleCalendarSync": "Sincronização com Google Calendar",
+      "simpleInterface": "Interface simples",
+      "dailyAiInsights": "Insights diários com IA",
+      "aiAssistant": "Mensagens do assistente IA",
+      "fivePerDay": "5 / dia",
+      "unlimited": "Ilimitado"
+    },
+    "ctaTitle": "Pronto para Começar?",
+    "ctaDescription": "Baixe o Voile Drift e comece a rastrear sua vida hoje.",
+    "ctaButton": "Baixar para Android"
   },
   "languageSwitcher": {
     "switchTo": "Mudar para {language}",
