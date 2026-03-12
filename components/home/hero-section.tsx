@@ -5,10 +5,69 @@ import { Button } from "@/components/ui/button";
 import { PlayStoreLink } from "@/components/shared/play-store-link";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
-import screenshot02 from "@/assets/screenshots/02.png";
+import { useCallback, useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
+import heroAfterGame from "@/assets/hero/after-game.jpg";
+import heroBook from "@/assets/hero/book.jpg";
+import heroCoffee from "@/assets/hero/coffee.jpg";
+import heroTree from "@/assets/hero/tree.jpg";
+
+const heroImages = [
+  { src: heroAfterGame, alt: "Relaxing after a game with Voile Drift" },
+  { src: heroBook, alt: "Reading a book with Voile Drift" },
+  { src: heroCoffee, alt: "Coffee moment with Voile Drift" },
+  { src: heroTree, alt: "Nature scene with Voile Drift" },
+];
+
+function CarouselDots({ api }: { api: CarouselApi }) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    setScrollSnaps(api.scrollSnapList());
+    onSelect();
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    return () => {
+      api.off("select", onSelect);
+      api.off("reInit", onSelect);
+    };
+  }, [api, onSelect]);
+
+  return (
+    <div className="flex items-center justify-center gap-1.5 mt-4">
+      {scrollSnaps.map((_, index) => (
+        <button
+          key={index}
+          className={`h-2 rounded-full transition-all duration-300 ${
+            index === selectedIndex
+              ? "bg-primary w-6"
+              : "bg-primary/30 w-2"
+          }`}
+          onClick={() => api?.scrollTo(index)}
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export function HeroSection() {
   const t = useTranslations("hero");
+  const [api, setApi] = useState<CarouselApi>();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-light/50 to-background py-20 md:py-32">
@@ -51,17 +110,30 @@ export function HeroSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+            <div className="relative w-full max-w-md">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-amber/20 blur-3xl rounded-full" />
-              <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl">
-                <div className="bg-slate-900 rounded-[2.5rem] overflow-hidden">
-                  <Image
-                    src={screenshot02}
-                    alt="Voile Drift app dashboard with AI insights"
-                    className="w-[280px] md:w-[320px] h-auto"
-                    priority
-                  />
-                </div>
+              <div className="relative">
+                <Carousel
+                  opts={{ loop: true }}
+                  plugins={[
+                    Autoplay({ delay: 4000, stopOnInteraction: false }),
+                  ]}
+                  setApi={setApi}
+                >
+                  <CarouselContent>
+                    {heroImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-auto rounded-2xl object-cover aspect-[4/3]"
+                          priority={index === 0}
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+                <CarouselDots api={api} />
               </div>
             </div>
           </div>
