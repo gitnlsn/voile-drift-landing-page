@@ -27,6 +27,10 @@
     "pricing": {
       "title": "Pricing",
       "description": "Choose the right Voile Drift plan for you. Free and Premium plans available."
+    },
+    "veraPrivacy": {
+      "title": "Vera - Privacy Policy",
+      "description": "Privacy Policy for Vera mobile application — a women's health and period prediction app."
     }
   },
   "navigation": {
@@ -405,6 +409,113 @@
     "ctaTitle": "Ready to Get Started?",
     "ctaDescription": "Download Voile Drift and start tracking your life today.",
     "ctaButton": "Download on Android"
+  },
+  "veraPrivacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content1": "Nelson Kenzo Tamashiro (\"we,\" \"our,\" or \"us\") operates the Vera mobile application (\"the App\"). Vera is a women's health application designed to help users track and predict their menstrual cycles. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App.",
+        "content2": "Please read this Privacy Policy carefully. By using the App, you consent to the practices described in this policy."
+      },
+      "informationCollected": {
+        "title": "2. Information We Collect",
+        "providedTitle": "2.1 Information You Provide",
+        "providedItems": {
+          "account": "Account Information: When you sign in with Google, we receive your name, email address, and profile picture."
+        },
+        "healthTitle": "2.2 Health Data",
+        "healthIntro": "Vera accesses and processes the following health-related data through the Android Health Connect API:",
+        "healthItems": {
+          "menstrualCycle": "Menstrual Cycle Data: Period start and end dates, cycle length, and cycle regularity.",
+          "periodDates": "Period Dates: Historical and current period dates used to identify patterns.",
+          "symptoms": "Symptoms: Any symptoms you choose to log, such as cramps, mood changes, or other cycle-related symptoms.",
+          "predictions": "Predictions: Based on the data above, Vera calculates and stores predicted future period dates and fertile windows."
+        },
+        "healthPurpose": "This health data is used exclusively to provide period predictions and cycle tracking functionality within the App. Your health data is stored locally on your device and is not transmitted to our servers.",
+        "automaticTitle": "2.3 Information Collected Automatically",
+        "automaticItems": {
+          "usage": "Usage Data: How you interact with the App, including features used and time spent.",
+          "device": "Device Information: Device type, operating system version, and unique device identifiers."
+        }
+      },
+      "howWeUse": {
+        "title": "3. How We Use Your Information",
+        "intro": "We use the information we collect to:",
+        "items": {
+          "maintain": "Provide and maintain the App's functionality",
+          "predictions": "Analyze your menstrual cycle data to generate period predictions and cycle insights",
+          "healthConnect": "Read and write health data through the Health Connect API to provide accurate tracking",
+          "improve": "Improve and optimize the App",
+          "support": "Respond to your inquiries and provide customer support",
+          "updates": "Send you updates and notifications related to the App (e.g., period reminders)"
+        }
+      },
+      "thirdParty": {
+        "title": "4. Third-Party Services",
+        "intro": "The App integrates with the following third-party services:",
+        "googleTitle": "4.1 Google Services",
+        "googleItems": {
+          "signIn": "Google Sign-In: For authentication purposes"
+        },
+        "googlePolicy": "Your use of Google services is governed by",
+        "googlePolicyLink": "Google's Privacy Policy",
+        "healthConnectTitle": "4.2 Android Health Connect",
+        "healthConnectContent": "Vera uses the Android Health Connect API to read and write menstrual cycle data. Health Connect acts as a centralized and secure repository for health data on your device. Data accessed through Health Connect remains on your device and is governed by your Health Connect permissions. You can revoke Vera's access to Health Connect at any time through your device's Health Connect settings."
+      },
+      "dataSecurity": {
+        "title": "5. Data Storage and Security",
+        "intro": "Your health data is stored locally on your device and within the Health Connect data store. We implement appropriate technical and organizational measures to protect your information, including:",
+        "items": {
+          "encryption": "Encryption of data in transit using HTTPS",
+          "auth": "Secure authentication through Google Sign-In",
+          "localStorage": "Local storage of health data — your menstrual cycle data does not leave your device",
+          "access": "Limited access to personal data"
+        },
+        "disclaimer": "However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security of your data."
+      },
+      "dataSharing": {
+        "title": "6. Data Sharing",
+        "intro": "We do not sell your personal information. We do not share your health data with any third parties. We may share non-health information in the following circumstances:",
+        "items": {
+          "providers": "With Service Providers: Third-party services that help us operate the App (excluding health data)",
+          "legal": "Legal Requirements: When required by law or to protect our rights",
+          "business": "Business Transfers: In connection with a merger, acquisition, or sale of assets"
+        }
+      },
+      "yourRights": {
+        "title": "7. Your Rights",
+        "intro": "Depending on your location, you may have the following rights:",
+        "items": {
+          "access": "Access: Request access to your personal data",
+          "correction": "Correction: Request correction of inaccurate data",
+          "deletion": "Deletion: Request deletion of your data",
+          "portability": "Portability: Request a copy of your data in a portable format",
+          "withdraw": "Withdraw Consent: Withdraw consent for data processing"
+        },
+        "exercise": "To exercise these rights, please contact us using the information below. You can also delete your health data at any time through the Health Connect settings on your device."
+      },
+      "dataRetention": {
+        "title": "8. Data Retention",
+        "content": "We retain your information for as long as your account is active or as needed to provide you services. Your health data is stored locally on your device and within Health Connect. You can delete your health data at any time through the App or through your device's Health Connect settings. Uninstalling the App will remove all locally stored data."
+      },
+      "children": {
+        "title": "9. Children's Privacy",
+        "content": "The App is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take steps to delete that information."
+      },
+      "changes": {
+        "title": "10. Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date. You are advised to review this Privacy Policy periodically for any changes."
+      },
+      "contactUs": {
+        "title": "11. Contact Us",
+        "intro": "If you have any questions about this Privacy Policy, please contact us:",
+        "developer": "Developer:",
+        "developerName": "Nelson Kenzo Tamashiro",
+        "email": "Email:"
+      }
+    }
   },
   "languageSwitcher": {
     "switchTo": "Switch to {language}",

@@ -27,6 +27,10 @@
     "pricing": {
       "title": "Preços",
       "description": "Escolha o plano ideal do Voile Drift para você. Planos Gratuito e Premium disponíveis."
+    },
+    "veraPrivacy": {
+      "title": "Vera - Política de Privacidade",
+      "description": "Política de Privacidade do aplicativo móvel Vera — um app de saúde feminina e previsão de período menstrual."
     }
   },
   "navigation": {
@@ -405,6 +409,113 @@
     "ctaTitle": "Pronto para Começar?",
     "ctaDescription": "Baixe o Voile Drift e comece a rastrear sua vida hoje.",
     "ctaButton": "Baixar para Android"
+  },
+  "veraPrivacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: Março de 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introdução",
+        "content1": "Nelson Kenzo Tamashiro (\"nós\", \"nosso\" ou \"nos\") opera o aplicativo móvel Vera (\"o App\"). Vera é um aplicativo de saúde feminina projetado para ajudar usuárias a rastrear e prever seus ciclos menstruais. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você usa nosso App.",
+        "content2": "Por favor, leia esta Política de Privacidade com atenção. Ao usar o App, você consente com as práticas descritas nesta política."
+      },
+      "informationCollected": {
+        "title": "2. Informações que Coletamos",
+        "providedTitle": "2.1 Informações que Você Fornece",
+        "providedItems": {
+          "account": "Informações da Conta: Quando você faz login com o Google, recebemos seu nome, endereço de email e foto de perfil."
+        },
+        "healthTitle": "2.2 Dados de Saúde",
+        "healthIntro": "Vera acessa e processa os seguintes dados relacionados à saúde através da API Android Health Connect:",
+        "healthItems": {
+          "menstrualCycle": "Dados do Ciclo Menstrual: Datas de início e fim do período, duração do ciclo e regularidade do ciclo.",
+          "periodDates": "Datas do Período: Datas históricas e atuais do período usadas para identificar padrões.",
+          "symptoms": "Sintomas: Quaisquer sintomas que você escolher registrar, como cólicas, mudanças de humor ou outros sintomas relacionados ao ciclo.",
+          "predictions": "Previsões: Com base nos dados acima, Vera calcula e armazena datas previstas de períodos futuros e janelas férteis."
+        },
+        "healthPurpose": "Estes dados de saúde são usados exclusivamente para fornecer previsões de período e funcionalidade de rastreamento de ciclo dentro do App. Seus dados de saúde são armazenados localmente no seu dispositivo e não são transmitidos para nossos servidores.",
+        "automaticTitle": "2.3 Informações Coletadas Automaticamente",
+        "automaticItems": {
+          "usage": "Dados de Uso: Como você interage com o App, incluindo recursos usados e tempo gasto.",
+          "device": "Informações do Dispositivo: Tipo de dispositivo, versão do sistema operacional e identificadores únicos do dispositivo."
+        }
+      },
+      "howWeUse": {
+        "title": "3. Como Usamos Suas Informações",
+        "intro": "Usamos as informações que coletamos para:",
+        "items": {
+          "maintain": "Fornecer e manter a funcionalidade do App",
+          "predictions": "Analisar seus dados de ciclo menstrual para gerar previsões de período e insights do ciclo",
+          "healthConnect": "Ler e gravar dados de saúde através da API Health Connect para fornecer rastreamento preciso",
+          "improve": "Melhorar e otimizar o App",
+          "support": "Responder às suas perguntas e fornecer suporte ao cliente",
+          "updates": "Enviar atualizações e notificações relacionadas ao App (ex.: lembretes de período)"
+        }
+      },
+      "thirdParty": {
+        "title": "4. Serviços de Terceiros",
+        "intro": "O App integra com os seguintes serviços de terceiros:",
+        "googleTitle": "4.1 Serviços Google",
+        "googleItems": {
+          "signIn": "Login com Google: Para fins de autenticação"
+        },
+        "googlePolicy": "Seu uso dos serviços Google é regido pela",
+        "googlePolicyLink": "Política de Privacidade do Google",
+        "healthConnectTitle": "4.2 Android Health Connect",
+        "healthConnectContent": "Vera usa a API Android Health Connect para ler e gravar dados de ciclo menstrual. O Health Connect atua como um repositório centralizado e seguro para dados de saúde no seu dispositivo. Os dados acessados através do Health Connect permanecem no seu dispositivo e são regidos pelas suas permissões do Health Connect. Você pode revogar o acesso do Vera ao Health Connect a qualquer momento através das configurações do Health Connect do seu dispositivo."
+      },
+      "dataSecurity": {
+        "title": "5. Armazenamento e Segurança de Dados",
+        "intro": "Seus dados de saúde são armazenados localmente no seu dispositivo e no armazenamento de dados do Health Connect. Implementamos medidas técnicas e organizacionais apropriadas para proteger suas informações, incluindo:",
+        "items": {
+          "encryption": "Criptografia de dados em trânsito usando HTTPS",
+          "auth": "Autenticação segura através do Login com Google",
+          "localStorage": "Armazenamento local de dados de saúde — seus dados de ciclo menstrual não saem do seu dispositivo",
+          "access": "Acesso limitado a dados pessoais"
+        },
+        "disclaimer": "No entanto, nenhum método de transmissão pela Internet é 100% seguro. Não podemos garantir segurança absoluta dos seus dados."
+      },
+      "dataSharing": {
+        "title": "6. Compartilhamento de Dados",
+        "intro": "Não vendemos suas informações pessoais. Não compartilhamos seus dados de saúde com terceiros. Podemos compartilhar informações não relacionadas à saúde nas seguintes circunstâncias:",
+        "items": {
+          "providers": "Com Provedores de Serviços: Serviços de terceiros que nos ajudam a operar o App (excluindo dados de saúde)",
+          "legal": "Requisitos Legais: Quando exigido por lei ou para proteger nossos direitos",
+          "business": "Transferências Comerciais: Em conexão com fusão, aquisição ou venda de ativos"
+        }
+      },
+      "yourRights": {
+        "title": "7. Seus Direitos",
+        "intro": "Dependendo da sua localização, você pode ter os seguintes direitos:",
+        "items": {
+          "access": "Acesso: Solicitar acesso aos seus dados pessoais",
+          "correction": "Correção: Solicitar correção de dados imprecisos",
+          "deletion": "Exclusão: Solicitar exclusão dos seus dados",
+          "portability": "Portabilidade: Solicitar uma cópia dos seus dados em formato portátil",
+          "withdraw": "Retirar Consentimento: Retirar consentimento para processamento de dados"
+        },
+        "exercise": "Para exercer esses direitos, entre em contato conosco usando as informações abaixo. Você também pode excluir seus dados de saúde a qualquer momento através das configurações do Health Connect no seu dispositivo."
+      },
+      "dataRetention": {
+        "title": "8. Retenção de Dados",
+        "content": "Retemos suas informações enquanto sua conta estiver ativa ou conforme necessário para fornecer serviços. Seus dados de saúde são armazenados localmente no seu dispositivo e no Health Connect. Você pode excluir seus dados de saúde a qualquer momento através do App ou das configurações do Health Connect do seu dispositivo. Desinstalar o App removerá todos os dados armazenados localmente."
+      },
+      "children": {
+        "title": "9. Privacidade de Crianças",
+        "content": "O App não é destinado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se descobrirmos que coletamos informações pessoais de uma criança menor de 13 anos, tomaremos medidas para excluir essas informações."
+      },
+      "changes": {
+        "title": "10. Alterações nesta Política de Privacidade",
+        "content": "Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos sobre quaisquer alterações publicando a nova Política de Privacidade nesta página e atualizando a data de \"Última atualização\". Recomendamos que você revise esta Política de Privacidade periodicamente para quaisquer alterações."
+      },
+      "contactUs": {
+        "title": "11. Fale Conosco",
+        "intro": "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco:",
+        "developer": "Desenvolvedor:",
+        "developerName": "Nelson Kenzo Tamashiro",
+        "email": "Email:"
+      }
+    }
   },
   "languageSwitcher": {
     "switchTo": "Mudar para {language}",
